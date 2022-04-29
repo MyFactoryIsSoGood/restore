@@ -1,0 +1,22 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block main %}
+    <main>
+        <div class="container my-3">
+            <h2 class="mt-3 mb-3 text-center">Товары:</h2>
+
+            <div class="roww">
+                {% for gadget in gadgets %}
+                    <div class="column">
+                        <div class="table-content">
+                            <h4>{{ gadget.name }}</h4>
+                            <img class="thumbnail" src="{{ gadget.photo.url }}" alt="">
+                            <p><strong>Цена:</strong> ${{ gadget.price }}</p>
+                        </div>
+                        <a class="btn btn-primary mb-3" style="width:50%" href="/gadget_{{ gadget.pk }}" role="button">Подробнее...</a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </main>
+{% endblock %}
