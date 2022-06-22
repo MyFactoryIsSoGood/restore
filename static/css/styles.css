@@ -11,6 +11,12 @@
     gap: 2rem;
 }
 
+.statsNform {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 100px);
+    gap: 2rem;
+}
+
 .column {
     display: flex;
     justify-content: space-between;
@@ -18,11 +24,63 @@
     align-items: center;
     border-radius: 15px;
     box-shadow: 3px 7px 20px 20px #d9d9d940;
-    padding: 15px 0px;
+    padding: 15px 0;
 }
 
 .thumbnail {
     width: 300px;
     height: 300px;
     object-fit: contain;
+}
+
+.commentForm {
+    width: 90%;
+}
+
+textarea {
+    height: 100px;
+}
+
+.statsBar {
+    width: 77%;
+    display: inline-block;
+}
+
+.statsBarFilled {
+    background-color: #0d6efd;
+    border-radius: 8px;
+    height: 24px;
+    margin: 3px 0px 3px 10px;
+}
+
+.statsBlock {
+    width: 90%;
+}
+.ratingStar {
+    float: right;
+    width: 15%;
+    height: 15%;
+    margin: 0;
+}
+svg {
+    margin: 0;
+}
+g {
+    margin: 0;
+}
+path {
+    margin: 0;
+}
+.rating {
+    width: 20%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.linkNbar {
+    vertical-align: top;
+}
+
+.stringTextLink {
+    margin-left: 135px;
 }

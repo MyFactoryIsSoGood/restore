@@ -29,9 +29,9 @@
                     <a href="/category/laptops" class="nav-link">MacBook</a>
                 </li>
             </ul>
-            <form action="" class="d-flex">
-                <input type="search" placeholder="Название товара..." class="form-control me-2">
-                <button class="btn btn-outline-primary">Найти</button>
+            <form method="get" action="{% url 'index' %}" class="d-flex">
+                <input type="search" name="q" placeholder="Название товара..." class="form-control me-2">
+                <button type="submit" class="btn btn-outline-primary">Найти</button>
             </form>
         </div>
     </div>

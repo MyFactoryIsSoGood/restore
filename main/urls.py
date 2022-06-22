@@ -15,10 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from .views import index, item_page
+from .views import index, item_page, CommentAddView
 
 urlpatterns = [
     path('', index, name='index'),
-    path('gadget_<int:pk>/', item_page, name='gadget_page'),
+    path('gadget_<int:pk>/', CommentAddView.as_view(), name='gadget_page'),
     path('category/<str:category>', index, name='category_filter')
 ]

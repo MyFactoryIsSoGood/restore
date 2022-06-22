@@ -23,5 +23,5 @@ class Comment(models.Model):
     text = models.TextField(verbose_name='Отзыв')
     rating = models.IntegerField(choices=Rating.choices)
     author_name = models.CharField(max_length=20, verbose_name='Автор')
-    date_published = models.DateField(verbose_name='Дата публикации')
+    date_published = models.DateField(verbose_name='Дата публикации', auto_now_add=True)
     to_item = models.ForeignKey(Gadget, on_delete=models.CASCADE, verbose_name='Товар')
